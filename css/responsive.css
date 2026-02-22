@@ -89,6 +89,10 @@
     margin-bottom: 8px;
 }
 
+[data-theme='dark'] .menu-card-name {
+    color: var(--text-dark);
+}
+
 .menu-card-desc {
     font-size: 0.85rem;
     color: var(--text-light);
@@ -203,6 +207,10 @@
     margin-bottom: 4px;
 }
 
+[data-theme='dark'] .info-text h4 {
+    color: var(--text-dark);
+}
+
 .info-text p {
     font-size: 0.875rem;
     color: var(--text-light);
@@ -254,6 +262,10 @@
     font-size: 1.1rem;
     color: var(--brown-dark);
     margin-bottom: 10px;
+}
+
+[data-theme='dark'] .direction-card h3 {
+    color: var(--text-dark);
 }
 
 .direction-card p {
@@ -377,6 +389,10 @@
     line-height: 1.3;
     margin-bottom: 10px;
     transition: color 0.2s;
+}
+
+[data-theme='dark'] .blog-card-title {
+    color: var(--text-dark);
 }
 
 .blog-card:hover .blog-card-title {

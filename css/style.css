@@ -59,32 +59,68 @@
   --transition-fast: all 0.18s ease;
 }
 
-/* --- Dark Theme Palette (Espresso Dark) --- */
+/* --- Dark Theme Palette (Elite Espresso) --- */
 [data-theme='dark'] {
-  --brown-darkest: #0a0400;
-  --brown-dark: #120800;
+  --brown-darkest: #0c0805;
+  /* Deep Roasted Bean */
+  --brown-dark: #140d07;
   --brown-medium: #8B5E3C;
-  --brown-light: #D4B483;
-  --brown-pale: #3E1F00;
+  --brown-light: #D4AF37;
+  /* Muted Gold Accent */
+  --brown-pale: #2a180b;
 
   --green-dark: #0d1a04;
   --green-primary: #7DBF5B;
   --green-medium: #C1E6A0;
 
-  --cream: #120800;
-  /* Deep coffee bean black-brown */
-  --cream-dark: #1C1009;
-  --white: #1a0f08;
-  --text-dark: #FDF6E3;
-  /* Cream text for dark bg */
-  --text-medium: #E8C99A;
+  --cream: #0c0805;
+  --cream-dark: #1a120b;
+  --white: #140d07;
+  --text-dark: #F6E6D5;
+  /* Soft Almond Cream */
+  --text-medium: #D4B483;
   --text-light: #A89070;
-  --text-muted: #6F4E37;
+  --text-muted: #8B7355;
 
-  --gradient-hero: linear-gradient(135deg, rgba(10, 5, 0, 0.95) 0%, rgba(28, 16, 9, 0.85) 100%);
-  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
+  --gradient-hero: linear-gradient(135deg, rgba(12, 8, 5, 0.98) 0%, rgba(30, 20, 10, 0.85) 100%);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+/* Explicit Dark Mode Contrast Adjustments */
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] .section-title,
+[data-theme='dark'] .logo-text,
+[data-theme='dark'] .hero-title,
+[data-theme='dark'] .navbar-nav .nav-link,
+[data-theme='dark'] .btn-white {
+  color: var(--text-dark) !important;
+}
+
+[data-theme='dark'] .section-label,
+[data-theme='dark'] .section-title span {
+  color: var(--brown-light) !important;
+}
+
+[data-theme='dark'] .footer-brand .logo-text,
+[data-theme='dark'] .footer-col h4,
+[data-theme='dark'] .page-hero .section-title,
+[data-theme='dark'] .modal-header h3,
+[data-theme='dark'] .cart-panel-header h3,
+[data-theme='dark'] .loader-logo {
+  color: var(--text-dark) !important;
+}
+
+[data-theme='dark'] .page-loader {
+  background-color: var(--brown-darkest) !important;
+}
+
+[data-theme='dark'] .loader-bar {
+  background: rgba(246, 230, 213, 0.2) !important;
 }
 
 /* --- Keyframes & Micro-animations --- */
@@ -904,6 +940,10 @@ select {
   color: var(--brown-dark);
 }
 
+[data-theme='dark'] .testimonial-name {
+  color: var(--text-dark);
+}
+
 .testimonial-location {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -961,6 +1001,11 @@ select {
   background: var(--cream-dark);
   color: var(--brown-dark);
   transition: var(--transition-fast);
+}
+
+[data-theme='dark'] .share-btn {
+  background: var(--brown-pale);
+  color: var(--text-dark);
 }
 
 .share-btn:hover {

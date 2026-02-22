@@ -4,8 +4,8 @@ Java Buzz is a modern, premium web experience designed for a specialty coffee sh
 
 ## 🚀 Live Features
 
-### 🌙 Espresso Dark Mode
-- **Persistent Theme**: A high-contrast dark mode palette ("Espresso Dark") that persists across page reloads and navigation sessions using `localStorage`.
+### 🌙 Elite Espresso Dark Mode
+- **Persistent Theme**: A sophisticated, high-contrast dark mode palette ("Elite Espresso") using deep roasted bean tones and bronze-gold accents. It persists across page reloads using `localStorage`.
 - **Dynamic Toggle**: A smooth, animated theme switcher integrated directly into the navigation bar.
 
 ### ❤️ Personalized Favorites System

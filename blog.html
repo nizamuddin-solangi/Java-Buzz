@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – Java Buzz Coffee | Brewing Tips, News & Stories</title>
+    <meta name="description"
+        content="Read the Java Buzz blog for expert brewing tips, behind-the-scenes stories, sustainability news, seasonal menu updates, and coffee culture. 10+ articles updated regularly.">
+    <meta name="keywords"
+        content="Java Buzz blog, coffee brewing tips, espresso guide, cold brew, coffee health, specialty coffee blog, NYC coffee, sustainability, coffee recipes">
+    <meta name="author" content="Java Buzz Coffee">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-logo">Java <span>Buzz</span></div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-logo" aria-label="Java Buzz Home">
+                <div class="logo-icon">☕</div>
+                <span class="logo-text">Java <span>Buzz</span></span>
+            </a>
+            <ul class="navbar-nav" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="location.html" class="nav-link">Location</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+            <div class="navbar-actions" style="display:flex; align-items:center; gap:12px;">
+                <button class="cart-nav-btn" aria-label="Open cart">
+                    <span>🛒</span>
+                    <span class="cart-badge">0</span>
+                </button>
+                <a href="index.html" class="navbar-order" data-order-modal="true">Order Now →</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-modal="true">
+        <ul role="list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+        <a href="index.html" class="navbar-order">Order Now →</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="Blog page header">
+        <div class="container">
+            <span class="section-label">Stories, Tips & Updates</span>
+            <h1 class="section-title" style="color:var(--white)">The Java Buzz <span
+                    style="color:var(--brown-light)">Blog</span></h1>
+            <p class="section-subtitle" style="margin:0 auto;">
+                From expert brewing guides to behind-the-scenes stories and sustainability updates — your go-to coffee
+                reading.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section" id="blog" aria-label="Blog posts">
+        <div class="container">
+
+            <!-- Search Bar -->
+            <div class="blog-search-bar">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input type="search" id="blog-search" placeholder="Search articles by title, author, or tag…"
+                    aria-label="Search blog posts">
+            </div>
+
+            <!-- Blog Category Tabs -->
+            <div class="filter-tabs" role="tablist" aria-label="Blog categories" style="margin-bottom:40px;">
+                <button class="filter-tab active" role="tab" id="blog-filter-all" aria-selected="true"
+                    onclick="filterBlogsByCategory('all', this)">All Posts</button>
+                <button class="filter-tab" role="tab" id="blog-filter-tips" aria-selected="false"
+                    onclick="filterBlogsByCategory('Brewing Tips', this)">☕ Brewing Tips</button>
+                <button class="filter-tab" role="tab" id="blog-filter-story" aria-selected="false"
+                    onclick="filterBlogsByCategory('Our Story', this)">📖 Our Story</button>
+                <button class="filter-tab" role="tab" id="blog-filter-health" aria-selected="false"
+                    onclick="filterBlogsByCategory('Health & Wellness', this)">💚 Health</button>
+                <button class="filter-tab" role="tab" id="blog-filter-news" aria-selected="false"
+                    onclick="filterBlogsByCategory('News & Updates', this)">📰 News</button>
+                <button class="filter-tab" role="tab" id="blog-filter-sustainability" aria-selected="false"
+                    onclick="filterBlogsByCategory('Sustainability', this)">🌿 Sustainability</button>
+                <button class="filter-tab" role="tab" id="blog-filter-community" aria-selected="false"
+                    onclick="filterBlogsByCategory('Community', this)">🤝 Community</button>
+            </div>
+
+            <!-- Blog Grid (populated by JS) -->
+            <div class="blog-grid" id="blog-grid" aria-live="polite" aria-label="Blog post cards">
+                <!-- Posts rendered by blog.js -->
+                <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--text-muted);">
+                    <span style="font-size:2rem;">📖</span>
+                    <p style="margin-top:12px;">Loading posts…</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter" aria-label="Newsletter signup">
+        <div class="container">
+            <div class="newsletter-box">
+                <span class="section-label">Never Miss a Post</span>
+                <h2 class="section-title">Subscribe to the <span style="color:var(--brown-light)">Java Buzz</span> Blog
+                </h2>
+                <p class="section-subtitle">Get new posts, brewing guides, and seasonal news delivered to your inbox
+                    weekly.</p>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <input type="email" placeholder="Your email address…" aria-label="Email address" required>
+                    <button type="submit">Subscribe ☕</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Java <span>Buzz</span></span>
+                    <p>Manhattan's finest specialty coffee shop, where every cup tells a story of craft, care, and
+                        community.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="location.html">Find Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><a>Mon – Fri: 7AM – 9PM</a></li>
+                        <li><a>Saturday: 8AM – 10PM</a></li>
+                        <li><a>Sunday: 8AM – 10PM</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+12125558299">📞 (212) 555-BUZZ</a></li>
+                        <li><a href="mailto:hello@javabuzz.coffee">✉️ hello@javabuzz.coffee</a></li>
+                        <li><a href="location.html">📍 123 Brew St, Manhattan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Java Buzz Coffee. All rights reserved. Crafted with ☕ in Manhattan.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Cart UI -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close-btn" id="cart-close-btn">✕</button>
+        </div>
+        <div class="cart-body" id="cart-panel-body">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer" id="cart-panel-footer">
+            <!-- Cart summary injected by JS -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/order.js"></script>
+    <script>
+        // Category filter from tabs (blog.js provides the search; this extends it)
+        function filterBlogsByCategory(category, btn) {
+            document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            // Trigger the blog.js search with category filter
+            const searchInput = document.getElementById('blog-search');
+            if (searchInput) {
+                searchInput.value = category === 'all' ? '' : category;
+                searchInput.dispatchEvent(new Event('input'));
+            }
+        }
+    </script>
+</body>
+
+</html>

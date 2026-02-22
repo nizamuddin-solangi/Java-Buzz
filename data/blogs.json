@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "The Art of the Perfect Espresso Pull",
+    "author": "Marco Vitali",
+    "date": "2026-02-15",
+    "category": "Brewing Tips",
+    "excerpt": "Pulling the perfect espresso is both a science and an art. Discover the secrets behind pressure, temperature, and grind size that make our espresso truly exceptional.",
+    "content": "A great espresso starts long before it hits the cup. At Java Buzz, we obsess over every variable — from the 93°C water temperature to the 9-bar extraction pressure. Our beans are ground fresh per order, and extraction time is timed to exactly 25–30 seconds for that perfect golden crema. It's a ritual we love every single morning.",
+    "image": "images/blog-espresso-pull.jpg",
+    "tags": [
+      "espresso",
+      "brewing",
+      "technique"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "From Farm to Cup: Our Single-Origin Sourcing Story",
+    "author": "Amara Osei",
+    "date": "2026-02-10",
+    "category": "Our Story",
+    "excerpt": "We travel thousands of miles to find the world's finest coffee farms. Learn about our sourcing partnerships in Ethiopia, Colombia, and Guatemala.",
+    "content": "Every bean at Java Buzz carries a story. Our head buyer Amara has visited over 40 farms across three continents, building relationships that ensure both quality and fair compensation for farmers. We source single-origin lots from the Yirgacheffe region of Ethiopia, the Huila highlands of Colombia, and the Antigua valley of Guatemala. Each origin brings something unique — florals, chocolate, citrus.",
+    "image": "images/blog-sourcing.jpg",
+    "tags": [
+      "sourcing",
+      "single-origin",
+      "sustainability"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Why Cold Brew is More Than Just Iced Coffee",
+    "author": "Sarah Chen",
+    "date": "2026-02-05",
+    "category": "Brewing Tips",
+    "excerpt": "Cold brew and iced coffee are vastly different in flavor, caffeine, and preparation. We break down the science and share our 24-hour steep recipe.",
+    "content": "Many people think cold brew is just coffee poured over ice — it's not. Cold brew is steeped in cold water for 18–24 hours, producing a concentrate that is naturally sweeter, less acidic, and significantly higher in caffeine. At Java Buzz, we steep our signature blend with a water-to-coffee ratio of 1:4, then dilute to taste. The result is a silky, chocolate-forward brew that's refreshing in any season.",
+    "image": "images/blog-cold-brew.jpg",
+    "tags": [
+      "cold brew",
+      "brewing",
+      "summer"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Latte Art: The Language of the Barista",
+    "author": "Lucas Ferreira",
+    "date": "2026-01-28",
+    "category": "Barista Culture",
+    "excerpt": "A rosette or heart in your latte cup isn't just pretty — it tells you the milk was steamed correctly and the barista truly cares. Here's how we train our team.",
+    "content": "Latte art is the final signature a barista puts on a drink. At Java Buzz, every barista undergoes a 40-hour latte art training program before serving a single cup. Milk steamed to 65°C with a silky microfoam consistency allows the barista to pour beautiful patterns. Our most common designs are the classic heart, the rosette, and the tulip — each requiring muscle memory and practice.",
+    "image": "images/blog-latte-art.jpg",
+    "tags": [
+      "latte art",
+      "barista",
+      "milk"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Coffee and Health: What the Research Actually Says",
+    "author": "Dr. Priya Sharma",
+    "date": "2026-01-20",
+    "category": "Health & Wellness",
+    "excerpt": "Coffee gets a lot of mixed press, but the science is more nuanced. We explore the benefits, the myths, and the ideal daily intake for coffee lovers.",
+    "content": "Multiple large-scale studies have linked moderate coffee consumption (2–4 cups/day) with reduced risk of type 2 diabetes, Parkinson's disease, and liver cirrhosis. The antioxidants in coffee are among the highest of any beverage. However, excessive consumption can raise cortisol and disrupt sleep. At Java Buzz, we recommend enjoying your coffee mindfully — savor the ritual as much as the caffeine.",
+    "image": "images/blog-health.jpg",
+    "tags": [
+      "health",
+      "research",
+      "wellness"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Behind the Scenes: A Day in Our Roastery",
+    "author": "Marco Vitali",
+    "date": "2026-01-15",
+    "category": "Our Story",
+    "excerpt": "Our small-batch roastery operates six days a week. Join us for a behind-the-scenes look at how green coffee becomes the rich, aromatic beans in your cup.",
+    "content": "The roastery starts at 5 AM. Green beans arrive in 60kg burlap sacks, sorted by origin and roast profile. Our head roaster Marco monitors bean temperature, color, and aroma during each 18-minute roast cycle. First crack signals the beginning of light roast territory; second crack, the darker profiles. Every batch is cupped (tasted) before it's approved for the shop floor. We roast in batches of 12kg to ensure freshness.",
+    "image": "images/blog-roastery.jpg",
+    "tags": [
+      "roasting",
+      "behind-the-scenes",
+      "craft"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Seasonal Specials: What's Brewing This Spring",
+    "author": "Sarah Chen",
+    "date": "2026-01-08",
+    "category": "News & Updates",
+    "excerpt": "Spring at Java Buzz means floral lattes, honey-infused cold brews, and our beloved Lavender Fog latte is back on the menu. Here's a preview of what's coming.",
+    "content": "Seasonality isn't just for food — coffee shines differently in each season. For spring, we're introducing the Honeybee Latte (espresso, wildflower honey, oat milk), the Jasmine Cold Brew Tonic, and our fan-favorite Lavender Fog Latte returns. We'll also feature a guest espresso from a micro-roaster in Portland. Menu drops March 1st — follow us to stay in the loop.",
+    "image": "images/blog-seasonal.jpg",
+    "tags": [
+      "seasonal",
+      "menu",
+      "spring"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Decaf Doesn't Mean Dull: Our Swiss Water Process Beans",
+    "author": "Amara Osei",
+    "date": "2025-12-30",
+    "category": "Brewing Tips",
+    "excerpt": "We refuse to serve bad decaf. Learn how Swiss Water Process removes caffeine without chemicals, preserving all the flavor that makes great coffee great.",
+    "content": "The Swiss Water Process uses only water, temperature, and time to remove 99.9% of caffeine from coffee beans — no chemicals, no solvents. The result is a decaf that actually tastes like coffee. Our decaf option features a washed Ethiopian Yirgacheffe, processed in Vancouver, Canada. It brews beautifully as pour-over and surprises even the most staunch caffeine devotees.",
+    "image": "images/blog-decaf.jpg",
+    "tags": [
+      "decaf",
+      "swiss water",
+      "process"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Community Spotlight: Java Buzz x Local Bakery Collab",
+    "author": "Lucas Ferreira",
+    "date": "2025-12-20",
+    "category": "Community",
+    "excerpt": "We've partnered with Crumble & Co., a local artisan bakery, to bring you pastries that are baked to pair perfectly with our signature blends.",
+    "content": "Great coffee deserves great food. We're thrilled to announce our collaboration with Crumble & Co., a women-owned artisan bakery just two blocks away. They bake fresh every morning — croissants, cardamom knots, and seasonal tarts — specifically developed alongside our coffee team to complement our flavor profiles. Look for their golden logo badge on all paired items on our menu.",
+    "image": "images/blog-community.jpg",
+    "tags": [
+      "community",
+      "collaboration",
+      "bakery"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Sustainability Report: Our 2025 Green Commitments",
+    "author": "Dr. Priya Sharma",
+    "date": "2025-12-10",
+    "category": "Sustainability",
+    "excerpt": "From compostable cups to carbon-offset shipping, here's a full breakdown of how Java Buzz reduced its environmental footprint in 2025.",
+    "content": "In 2025, Java Buzz eliminated single-use plastic entirely, replaced all cups with certified compostable alternatives, and partnered with a carbon-offset program to neutralize all shipping emissions. We achieved a 35% reduction in food waste by donating unsold pastries to a local shelter. Our electricity is sourced 100% from renewable providers. These are steps — not the finish line — and we publish updates every quarter.",
+    "image": "images/blog-sustainability.jpg",
+    "tags": [
+      "sustainability",
+      "green",
+      "environment"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "How to Brew Café-Quality Coffee at Home",
+    "author": "Marco Vitali",
+    "date": "2025-12-01",
+    "category": "Brewing Tips",
+    "excerpt": "You don't need a commercial machine to brew great coffee at home. Our head barista shares his top tips for pour-over, French press, and AeroPress.",
+    "content": "The three biggest mistakes home brewers make: using stale beans, grinding too coarse, and using water that's too hot. Buy whole beans and grind them right before brewing. Use a gooseneck kettle to control your pour. For pour-over, a 1:16 ratio (1g coffee per 16g water) is a great starting point. Pre-wet the filter to eliminate paper taste. Take notes — dial in your recipe like a barista does, adjusting one variable at a time.",
+    "image": "images/blog-home-brew.jpg",
+    "tags": [
+      "home brewing",
+      "tips",
+      "pour-over"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Meet the Team: The People Behind Your Morning Cup",
+    "author": "Sarah Chen",
+    "date": "2025-11-25",
+    "category": "Our Story",
+    "excerpt": "Great coffee is made by great people. We introduce you to the passionate team at Java Buzz — baristas, roasters, and the folks who keep the magic happening.",
+    "content": "Java Buzz is a team of 14 passionate coffee professionals. Marco, our head roaster, has been in the industry for 18 years. Amara, our sourcing director, speaks four languages and has visited farms on three continents. Our barista team averages 5 years of specialty coffee experience each. But what makes us really tick? A shared belief that your morning coffee should be the best part of your day.",
+    "image": "images/blog-team.jpg",
+    "tags": [
+      "team",
+      "people",
+      "culture"
+    ]
+  }
+]

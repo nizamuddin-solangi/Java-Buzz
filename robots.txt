@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow unnecessary files
+Disallow: /data/
+Disallow: /images/
+
+# Point crawlers to the sitemap
+Sitemap: https://www.javabuzz.coffee/sitemap.xml
+
+# Crawl delay (optional - be kind to small servers)
+Crawl-delay: 10

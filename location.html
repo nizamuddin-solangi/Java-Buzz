@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us – Java Buzz Coffee | Location, Map & Directions</title>
+    <meta name="description"
+        content="Visit Java Buzz at 123 Brew Street, Manhattan, NYC. Get directions by car, subway, or foot. Parking information and opening hours included. Interactive map powered by Leaflet.">
+    <meta name="keywords"
+        content="Java Buzz location, coffee shop address, Manhattan coffee, NYC coffee shop map, directions to Java Buzz, parking, opening hours">
+    <meta name="author" content="Java Buzz Coffee">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/order.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <style>
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px !important;
+            padding: 4px !important;
+            box-shadow: 0 8px 32px rgba(62, 31, 0, 0.2) !important;
+        }
+
+        .leaflet-popup-tip {
+            background: white !important;
+        }
+
+        .leaflet-control-zoom a {
+            border-radius: 8px !important;
+            color: #3E1F00 !important;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-logo">Java <span>Buzz</span></div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-logo" aria-label="Java Buzz Home">
+                <div class="logo-icon">☕</div>
+                <span class="logo-text">Java <span>Buzz</span></span>
+            </a>
+            <ul class="navbar-nav" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="location.html" class="nav-link active">Location</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+            <div class="navbar-actions" style="display:flex; align-items:center; gap:12px;">
+                <button class="cart-nav-btn" aria-label="Open cart">
+                    <span>🛒</span>
+                    <span class="cart-badge">0</span>
+                </button>
+                <a href="index.html" class="navbar-order" data-order-modal="true">Order Now →</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-modal="true">
+        <ul role="list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+        <a href="index.html" class="navbar-order">Order Now →</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="Location page header">
+        <div class="container">
+            <span class="section-label">Come Find Us</span>
+            <h1 class="section-title" style="color:var(--white)">Our <span
+                    style="color:var(--brown-light)">Location</span></h1>
+            <p class="section-subtitle" style="margin:0 auto;">We're right in the heart of Manhattan — easy to reach by
+                subway, foot, or car.</p>
+        </div>
+    </section>
+
+    <!-- Location + Map Section -->
+    <section class="section location-section" id="location" aria-label="Map and address">
+        <div class="container">
+            <div class="location-grid">
+
+                <!-- Info Card -->
+                <div class="location-info-card animate-on-scroll">
+                    <div class="location-info-header">
+                        <h2>☕ Java Buzz Coffee</h2>
+                        <p>Visit us — we'd love to see you!</p>
+                    </div>
+                    <div class="location-info-body">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Address</h4>
+                                <p>123 Brew Street<br>Manhattan, New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-text">
+                                <h4>Opening Hours</h4>
+                                <p>
+                                    Mon – Fri: 7:00 AM – 9:00 PM<br>
+                                    Saturday: 8:00 AM – 10:00 PM<br>
+                                    Sunday: 8:00 AM – 10:00 PM
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+12125558299" style="color:var(--brown-primary); font-weight:500;">(212)
+                                        555-BUZZ</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:hello@javabuzz.coffee"
+                                        style="color:var(--brown-primary); font-weight:500;">hello@javabuzz.coffee</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-item" style="border-bottom:none; padding-bottom:0;">
+                            <div class="info-icon">🅿️</div>
+                            <div class="info-text">
+                                <h4>Parking</h4>
+                                <p>Street parking available on Brew St. Parking garage on 5th Ave, 1 block away ($8/hr).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <div id="map" aria-label="Interactive map showing Java Buzz location"></div>
+                    <div style="text-align:center; margin-top:16px;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=40.7128,-74.0060" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary" id="get-directions-btn"
+                            style="margin-right:12px;">
+                            🗺️ Get Directions
+                        </a>
+                        <button id="toggle-scroll-zoom" class="btn btn-outline btn-sm">Enable Scroll Zoom</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Directions Section -->
+    <section class="section directions-section" id="directions" aria-label="How to get here">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Getting Here</span>
+                <h2 class="section-title">How to <span>Find Us</span></h2>
+                <p class="section-subtitle">No matter how you travel, we're easy to reach. Here are the best ways to get
+                    to Java Buzz.</p>
+            </div>
+            <div class="directions-grid">
+                <div class="direction-card animate-on-scroll" id="direction-subway">
+                    <span class="direction-icon">🚇</span>
+                    <h3>By Subway</h3>
+                    <p>Take the <strong>A, C, or E line</strong> to 14th Street Station. We're a 3-minute walk south on
+                        8th Avenue, then right on Brew Street.</p>
+                </div>
+                <div class="direction-card animate-on-scroll" id="direction-car">
+                    <span class="direction-icon">🚗</span>
+                    <h3>By Car</h3>
+                    <p>Take I-95 to exit 12, then follow 9th Avenue south. Turn right on Brew Street. Parking available
+                        on-street and in the 5th Ave garage.</p>
+                </div>
+                <div class="direction-card animate-on-scroll" id="direction-walk">
+                    <span class="direction-icon">🚶</span>
+                    <h3>On Foot</h3>
+                    <p>From Penn Station, head west on 34th Street to 9th Ave, then south 6 blocks. Turn left on Brew
+                        Street — look for our green awning!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Java <span>Buzz</span></span>
+                    <p>Manhattan's finest specialty coffee shop, where every cup tells a story of craft, care, and
+                        community.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="location.html">Find Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><a>Mon – Fri: 7AM – 9PM</a></li>
+                        <li><a>Saturday: 8AM – 10PM</a></li>
+                        <li><a>Sunday: 8AM – 10PM</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+12125558299">📞 (212) 555-BUZZ</a></li>
+                        <li><a href="mailto:hello@javabuzz.coffee">✉️ hello@javabuzz.coffee</a></li>
+                        <li><a href="location.html">📍 123 Brew St, Manhattan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Java Buzz Coffee. All rights reserved. Crafted with ☕ in Manhattan.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Cart UI -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close-btn" id="cart-close-btn">✕</button>
+        </div>
+        <div class="cart-body" id="cart-panel-body">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer" id="cart-panel-footer">
+            <!-- Cart summary injected by JS -->
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/order.js"></script>
+</body>
+
+</html>

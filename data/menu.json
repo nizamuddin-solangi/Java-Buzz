@@ -1,0 +1,155 @@
+[
+    {
+        "id": 1,
+        "name": "Signature Espresso",
+        "description": "Our house blend espresso — rich, bold, with a velvety golden crema and notes of dark chocolate and toasted hazelnut.",
+        "price": 3.50,
+        "category": "coffee",
+        "image": "images/menu-espresso.jpg",
+        "popular": true
+    },
+    {
+        "id": 2,
+        "name": "Lavender Oat Latte",
+        "description": "Espresso with house-made lavender syrup and steamed oat milk — floral, creamy, and utterly soothing.",
+        "price": 6.00,
+        "category": "coffee",
+        "image": "images/menu-latte.jpg",
+        "popular": true
+    },
+    {
+        "id": 3,
+        "name": "Classic Cappuccino",
+        "description": "Equal parts espresso, steamed milk, and thick microfoam — the perfect balance of strength and silk.",
+        "price": 5.00,
+        "category": "coffee",
+        "image": "images/menu-cappuccino.jpg",
+        "popular": false
+    },
+    {
+        "id": 4,
+        "name": "Cold Brew Reserve",
+        "description": "24-hour steered single-origin cold brew — naturally sweet, low acid, served over crystal-clear ice.",
+        "price": 6.50,
+        "category": "coffee",
+        "image": "images/menu-cold-brew.jpg",
+        "popular": true
+    },
+    {
+        "id": 5,
+        "name": "Caramel Macchiato",
+        "description": "Layers of vanilla-infused milk, bold espresso, and a generous drizzle of artisan caramel.",
+        "price": 6.25,
+        "category": "coffee",
+        "image": "images/menu-caramel-macchiato.jpg",
+        "popular": false
+    },
+    {
+        "id": 6,
+        "name": "Flat White",
+        "description": "Double ristretto shots with velvety microfoam milk — intense espresso character in every sip.",
+        "price": 5.50,
+        "category": "coffee",
+        "image": "images/menu-flat-white.jpg",
+        "popular": false
+    },
+    {
+        "id": 7,
+        "name": "Ethiopian Pour-Over",
+        "description": "Single-cup pour-over of Yirgacheffe beans — bright, floral, with blueberry and jasmine notes.",
+        "price": 7.00,
+        "category": "coffee",
+        "image": "images/menu-pour-over.jpg",
+        "popular": true
+    },
+    {
+        "id": 8,
+        "name": "Matcha Latte",
+        "description": "Ceremonial-grade Japanese matcha whisked smooth with steamed oat milk — earthy, creamy, vibrant green.",
+        "price": 6.00,
+        "category": "tea",
+        "image": "images/menu-matcha.jpg",
+        "popular": true
+    },
+    {
+        "id": 9,
+        "name": "Jasmine Green Tea",
+        "description": "Delicate loose-leaf jasmine green tea brewed with precision — light, aromatic, and refreshing.",
+        "price": 4.50,
+        "category": "tea",
+        "image": "images/menu-jasmine-tea.jpg",
+        "popular": false
+    },
+    {
+        "id": 10,
+        "name": "Chai Spice Latte",
+        "description": "House-brewed masala chai concentrate with steamed whole milk — warming spices of cinnamon, cardamom, and ginger.",
+        "price": 5.75,
+        "category": "tea",
+        "image": "images/menu-chai.jpg",
+        "popular": true
+    },
+    {
+        "id": 11,
+        "name": "Butter Croissant",
+        "description": "Flaky, golden-laminated croissant from our partner bakery Crumble & Co. — baked fresh every morning.",
+        "price": 4.00,
+        "category": "pastries",
+        "image": "images/menu-croissant.jpg",
+        "popular": true
+    },
+    {
+        "id": 12,
+        "name": "Cardamom Knot",
+        "description": "Pull-apart cardamom and brown sugar knot bun — sweet, aromatic, and dangerously addictive.",
+        "price": 4.50,
+        "category": "pastries",
+        "image": "images/menu-cardamom-knot.jpg",
+        "popular": false
+    },
+    {
+        "id": 13,
+        "name": "Blueberry Scone",
+        "description": "Tender, crumbly scone loaded with fresh blueberries and finished with a vanilla glaze.",
+        "price": 3.75,
+        "category": "pastries",
+        "image": "images/menu-scone.jpg",
+        "popular": false
+    },
+    {
+        "id": 14,
+        "name": "Dark Chocolate Brownie",
+        "description": "Dense, fudgy brownie made with 70% dark chocolate — intense, rich, and pairs perfectly with espresso.",
+        "price": 4.25,
+        "category": "pastries",
+        "image": "images/menu-brownie.jpg",
+        "popular": true
+    },
+    {
+        "id": 15,
+        "name": "Avocado Toast",
+        "description": "Sourdough toast with smashed avocado, chili flakes, lemon zest, and everything bagel seasoning.",
+        "price": 8.50,
+        "category": "snacks",
+        "image": "images/menu-avocado-toast.jpg",
+        "popular": true
+    },
+    {
+        "id": 16,
+        "name": "Granola Parfait",
+        "description": "Greek yogurt layered with house-made granola, seasonal berries, and a drizzle of local wildflower honey.",
+        "price": 7.00,
+        "category": "snacks",
+        "image": "images/menu-granola.jpg",
+        "popular": false
+    },
+    {
+        "id": 17,
+        "name": "Cheese & Charcuterie Board",
+        "description": "Artisan cheeses, cured meats, olives, and crackers — a small but impressive board for two.",
+        "price": 14.00,
+        "category": "snacks",
+        "image": "images/menu-charcuterie.jpg",
+        "popular": false
+    }
+]

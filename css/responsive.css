@@ -720,7 +720,66 @@
         gap: 20px;
     }
 
+    /* Hero Section Responsive */
+    .hero-flex-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+        gap: 32px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        order: 2;
+    }
+
+    .hero-image-side {
+        order: 1;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .main-floating-cup {
+        max-width: 280px;
+    }
+
+    .cup-sub-1 {
+        width: 120px;
+        right: -20px;
+        top: -10px;
+    }
+
+    .cup-sub-2 {
+        display: none;
+        /* Hide one sub-cup on mobile to prevent clutter */
+    }
+
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
     .hero-scroll {
+        display: none;
+    }
+
+    /* Floating Cups Responsive */
+    .cup-1 {
+        width: 80px;
+        top: 10%;
+        left: 5%;
+    }
+
+    .cup-2 {
+        width: 100px;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .cup-3 {
         display: none;
     }
 

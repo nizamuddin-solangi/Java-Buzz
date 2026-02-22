@@ -78,44 +78,140 @@
     <div class="hero-bg" role="img" aria-label="Coffee shop atmosphere"></div>
     <div class="hero-overlay"></div>
     <div class="hero-particles"></div>
+
+    <!-- Floating Cup Elements -->
+    <div class="hero-floating-elements" aria-hidden="true">
+      <div class="floating-cup cup-1">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 40 H75 V70 C75 80 65 85 50 85 C35 85 25 80 25 70 V40 Z" fill="rgba(200, 161, 106, 0.2)"
+            stroke="var(--brown-light)" stroke-width="2" />
+          <path d="M75 45 C85 45 90 50 90 55 C90 60 85 65 75 65" stroke="var(--brown-light)" stroke-width="2" />
+          <path d="M40 20 Q50 10 60 20" stroke="var(--brown-light)" stroke-width="1.5" stroke-linecap="round"
+            opacity="0.6">
+            <animate attributeName="d" values="M40 20 Q50 10 60 20;M40 20 Q30 10 40 20;M40 20 Q50 10 60 20" dur="3s"
+              repeatCount="indefinite" />
+          </path>
+        </svg>
+      </div>
+      <div class="floating-cup cup-2">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 45 H80 V70 C80 82 70 88 50 88 C30 88 20 82 20 70 V45 Z" fill="rgba(111, 78, 55, 0.15)"
+            stroke="var(--brown-light)" stroke-width="2" />
+          <path d="M35 15 Q45 5 55 15" stroke="var(--brown-light)" stroke-width="1" stroke-linecap="round"
+            opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite" />
+          </path>
+        </svg>
+      </div>
+      <div class="floating-cup cup-3">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 35 H70 V75 C70 80 65 82 50 82 C35 82 30 80 30 75 V35 Z" fill="rgba(255, 255, 255, 0.05)"
+            stroke="var(--brown-light)" stroke-width="2" />
+          <path d="M70 45 C78 45 82 48 82 52 C82 56 78 59 70 59" stroke="var(--brown-light)" stroke-width="2" />
+        </svg>
+      </div>
+    </div>
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge"><span>☕</span> MANHATTAN'S FINEST SPECIALTY COFFEE</div>
-        <h1 class="hero-title">
-          Every Sip is a
-          <em class="highlight">Story</em>
-          <span class="green-text">Worth Savoring</span>
-        </h1>
-        <p class="hero-desc">
-          At Java Buzz, we source the world's finest beans, roast them in small batches, and craft each cup with
-          obsessive care. Because your morning deserves to be extraordinary.
-        </p>
-        <div class="hero-actions">
-          <a href="menu.html" class="btn btn-primary" id="explore-menu-btn">Explore Our Menu ☕</a>
-          <a href="#" class="btn btn-outline" data-order-modal="true" id="order-now-btn"
-            style="color:rgba(255,255,255,0.9); border-color:rgba(255,255,255,0.4);">
-            Order Now →
-          </a>
+      <div class="hero-flex-container">
+        <div class="hero-content">
+          <div class="hero-badge"><span>☕</span> MANHATTAN'S FINEST SPECIALTY COFFEE</div>
+          <h1 class="hero-title">
+            Every Sip is a
+            <em class="highlight">Story</em>
+            <span class="green-text">Worth Savoring</span>
+          </h1>
+          <p class="hero-desc">
+            At Java Buzz, we source the world's finest beans, roast them in small batches, and craft each cup with
+            obsessive care. Because your morning deserves to be extraordinary.
+          </p>
+          <div class="hero-actions">
+            <a href="menu.html" class="btn btn-primary" id="explore-menu-btn">Explore Our Menu ☕</a>
+            <a href="#" class="btn btn-outline" data-order-modal="true" id="order-now-btn"
+              style="color:rgba(255,255,255,0.9); border-color:rgba(255,255,255,0.4);">
+              Order Now →
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="value">12+</span>
+              <span class="label">Origins</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="value">4.9★</span>
+              <span class="label">Rating</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="value">8K+</span>
+              <span class="label">Happy Guests</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="value">100%</span>
+              <span class="label">Organic</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="value">12+</span>
-            <span class="label">Origins</span>
+
+        <!-- Large Floating Coffee Cup Side -->
+        <div class="hero-image-side">
+          <div class="main-floating-cup">
+            <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Steam -->
+              <g class="steam-container">
+                <path class="steam-path" d="M100 40 Q110 20 120 40" stroke="var(--brown-light)" stroke-width="2"
+                  stroke-linecap="round" opacity="0.6">
+                  <animate attributeName="d"
+                    values="M100 40 Q110 20 120 40;M100 40 Q90 20 100 40;M100 40 Q110 20 120 40" dur="4s"
+                    repeatCount="indefinite" />
+                </path>
+                <path class="steam-path" d="M120 35 Q130 15 140 35" stroke="var(--brown-light)" stroke-width="2"
+                  stroke-linecap="round" opacity="0.4">
+                  <animate attributeName="d"
+                    values="M120 35 Q130 15 140 35;M120 35 Q110 15 120 35;M120 35 Q130 15 140 35" dur="5s"
+                    repeatCount="indefinite" />
+                </path>
+              </g>
+              <!-- Lid -->
+              <path d="M60 70 C60 62 70 55 100 55 C130 55 140 62 140 70 L145 85 H55 L60 70 Z" fill="var(--brown-pale)"
+                stroke="var(--brown-light)" stroke-width="2" />
+              <rect x="90" y="50" width="20" height="8" rx="2" fill="var(--brown-light)" opacity="0.8" />
+              <!-- Cup Body -->
+              <path d="M55 85 L70 260 C70 270 80 275 100 275 C120 275 130 270 130 260 L145 85 H55 Z"
+                fill="var(--brown-medium)" stroke="var(--brown-light)" stroke-width="3" />
+              <!-- Cup Sleeve -->
+              <path d="M59 130 L64 200 H136 L141 130 H59 Z" fill="var(--brown-dark)" stroke="var(--brown-light)"
+                stroke-width="1.5" />
+              <text x="100" y="170" text-anchor="middle" fill="var(--brown-light)" font-family="Dancing Script, cursive"
+                font-weight="bold" font-size="16">Java Buzz</text>
+              <!-- Shine/Details -->
+              <path d="M65 95 L75 250" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-linecap="round" />
+              <path d="M135 95 L125 250" stroke="rgba(0,0,0,0.1)" stroke-width="4" stroke-linecap="round" />
+            </svg>
+            <div class="cup-shadow"></div>
           </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="value">4.9★</span>
-            <span class="label">Rating</span>
+
+          <!-- Secondary Floating Cups -->
+          <div class="floating-cup-secondary cup-sub-1">
+            <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 70 C60 62 70 55 100 55 C130 55 140 62 140 70 L145 85 H55 L60 70 Z" fill="var(--brown-pale)"
+                stroke="var(--brown-light)" stroke-width="2" />
+              <path d="M55 85 L70 260 C70 270 80 275 100 275 C120 275 130 270 130 260 L145 85 H55 Z"
+                fill="var(--brown-medium)" stroke="var(--brown-light)" stroke-width="3" />
+              <path d="M59 130 L64 200 H136 L141 130 H59 Z" fill="var(--brown-dark)" stroke="var(--brown-light)"
+                stroke-width="1.5" />
+            </svg>
           </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="value">8K+</span>
-            <span class="label">Happy Guests</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="value">100%</span>
-            <span class="label">Organic</span>
+          <div class="floating-cup-secondary cup-sub-2">
+            <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 70 C60 62 70 55 100 55 C130 55 140 62 140 70 L145 85 H55 L60 70 Z" fill="var(--brown-pale)"
+                stroke="var(--brown-light)" stroke-width="2" />
+              <path d="M55 85 L70 260 C70 270 80 275 100 275 C120 275 130 270 130 260 L145 85 H55 Z"
+                fill="var(--brown-medium)" stroke="var(--brown-light)" stroke-width="3" />
+              <path d="M59 130 L64 200 H136 L141 130 H59 Z" fill="var(--brown-dark)" stroke="var(--brown-light)"
+                stroke-width="1.5" />
+            </svg>
           </div>
         </div>
       </div>

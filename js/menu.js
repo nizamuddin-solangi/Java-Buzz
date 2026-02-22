@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const menuGrid = document.getElementById('menu-grid');
     const filterTabs = document.querySelectorAll('.filter-tab');
     let allItems = [];
+    let favorites = JSON.parse(localStorage.getItem('java-buzz-favorites') || '[]');
 
     if (!menuGrid) return;
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
         items.forEach((item, i) => {
+            const isFav = favorites.includes(item.id);
             const card = document.createElement('div');
             card.className = 'menu-card animate-on-scroll';
             card.dataset.delay = i * 60;
@@ -34,6 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="menu-card-img-wrap">
           <img class="menu-card-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='images/page-hero-bg.jpg'">
           ${item.popular ? '<span class="menu-card-popular-badge">⭐ Popular</span>' : ''}
+          <button class="fav-btn ${isFav ? 'active' : ''}" onclick="window.toggleFavorite(${item.id}, this)" aria-label="Toggle favorite" title="Add to favorites">
+            ${isFav ? '❤️' : '🤍'}
+          </button>
         </div>
         <div class="menu-card-body">
           <span class="menu-card-category">${item.category}</span>
@@ -62,10 +67,42 @@ document.addEventListener('DOMContentLoaded', async () => {
             filterTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             const cat = tab.dataset.filter;
-            const filtered = cat === 'all' ? allItems : allItems.filter(item => item.category === cat);
+
+            let filtered;
+            if (cat === 'all') {
+                filtered = allItems;
+            } else if (cat === 'favorites') {
+                filtered = allItems.filter(item => favorites.includes(item.id));
+            } else {
+                filtered = allItems.filter(item => item.category === cat);
+            }
             renderMenu(filtered);
         });
     });
+
+    // Toggle favorite logic
+    window.toggleFavorite = function (id, btn) {
+        const index = favorites.indexOf(id);
+        if (index > -1) {
+            favorites.splice(index, 1);
+            btn.classList.remove('active');
+            btn.textContent = '🤍';
+            window.showToast && showToast('💔 Removed from favorites');
+        } else {
+            favorites.push(id);
+            btn.classList.add('active');
+            btn.textContent = '❤️';
+            window.showToast && showToast('❤️ Added to favorites!');
+        }
+        localStorage.setItem('java-buzz-favorites', JSON.stringify(favorites));
+
+        // If we are currently on the favorites tab, re-render to remove the item
+        const activeTab = document.querySelector('.filter-tab.active');
+        if (activeTab && activeTab.dataset.filter === 'favorites') {
+            const filtered = allItems.filter(item => favorites.includes(item.id));
+            renderMenu(filtered);
+        }
+    };
 
     // Add to order handler
     window.handleAddToOrder = function (id) {

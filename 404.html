@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Java Buzz Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .error-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 140px;
+        }
+
+        .error-content h1 {
+            font-size: clamp(6rem, 15vw, 10rem);
+            color: var(--brown-light);
+            font-family: var(--font-display);
+            line-height: 1;
+            margin-bottom: 0;
+            opacity: 0.2;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 24px;
+            display: block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .error-message {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--brown-dark);
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <div class="logo-icon">☕</div>
+                <span class="logo-text">Java <span>Buzz</span></span>
+            </a>
+            <div class="navbar-actions" style="display:flex; align-items:center; gap:12px;">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="location.html" class="nav-link">Location</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <h1>404</h1>
+                <span class="error-icon">☕</span>
+                <h2 class="error-message">Oops! This cup is empty.</h2>
+                <p class="section-subtitle" style="margin: 0 auto 32px;">We couldn't find the page you're looking for.
+                    Maybe it went for a coffee break?</p>
+                <a href="index.html" class="btn btn-primary">Back to Homepage →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 40px 0;">
+            <p>© 2026 Java Buzz Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

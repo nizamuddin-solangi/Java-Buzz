@@ -59,6 +59,84 @@
   --transition-fast: all 0.18s ease;
 }
 
+/* --- Dark Theme Palette (Espresso Dark) --- */
+[data-theme='dark'] {
+  --brown-darkest: #0a0400;
+  --brown-dark: #120800;
+  --brown-medium: #8B5E3C;
+  --brown-light: #D4B483;
+  --brown-pale: #3E1F00;
+
+  --green-dark: #0d1a04;
+  --green-primary: #7DBF5B;
+  --green-medium: #C1E6A0;
+
+  --cream: #120800;
+  /* Deep coffee bean black-brown */
+  --cream-dark: #1C1009;
+  --white: #1a0f08;
+  --text-dark: #FDF6E3;
+  /* Cream text for dark bg */
+  --text-medium: #E8C99A;
+  --text-light: #A89070;
+  --text-muted: #6F4E37;
+
+  --gradient-hero: linear-gradient(135deg, rgba(10, 5, 0, 0.95) 0%, rgba(28, 16, 9, 0.85) 100%);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Keyframes & Micro-animations --- */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(-15px) scale(1.2) rotate(5deg);
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-30px) scale(1.5) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(200, 161, 106, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(200, 161, 106, 0.4);
+  }
+}
+
 /* --- Reset & Base --- */
 *,
 *::before,
@@ -263,6 +341,16 @@ select {
   justify-content: center;
   font-size: 1.3rem;
   flex-shrink: 0;
+  position: relative;
+}
+
+.navbar-logo .logo-icon::after {
+  content: '♨️';
+  position: absolute;
+  top: -12px;
+  font-size: 0.8rem;
+  opacity: 0;
+  animation: steam 3s infinite;
 }
 
 .navbar-logo .logo-text {
@@ -313,6 +401,31 @@ select {
 .navbar-order:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(200, 161, 106, 0.5);
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(15deg);
+}
+
+[data-theme='dark'] .theme-toggle {
+  background: rgba(200, 161, 106, 0.2);
+  color: var(--brown-light);
+  border-color: rgba(200, 161, 106, 0.4);
 }
 
 .hamburger {
@@ -554,8 +667,8 @@ select {
 }
 
 .featured-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-lg), 0 12px 40px rgba(62, 31, 0, 0.3);
 }
 
 .featured-card-img {
@@ -608,6 +721,35 @@ select {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--brown-light);
+}
+
+/* --- Favorites Heart --- */
+.fav-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
+  z-index: 10;
+}
+
+.fav-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.fav-btn.active {
+  color: #EF4444;
+  background: #fff;
 }
 
 /* --- Why Us Section --- */
@@ -672,6 +814,7 @@ select {
   margin-bottom: 20px;
   display: block;
   filter: drop-shadow(0 0 12px rgba(200, 161, 106, 0.3));
+  animation: float 4s ease-in-out infinite;
 }
 
 .why-card-title {
@@ -798,6 +941,40 @@ select {
 .newsletter-box .section-title {
   color: var(--white);
   margin-bottom: 12px;
+}
+
+/* --- Social Share Buttons (Blog) --- */
+.blog-social-share {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.share-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  background: var(--cream-dark);
+  color: var(--brown-dark);
+  transition: var(--transition-fast);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  background: var(--brown-light);
+  color: var(--white);
+}
+
+.share-btn.fb:hover {
+  background: #1877F2;
+}
+
+.share-btn.tw:hover {
+  background: #1DA1F2;
 }
 
 .newsletter-box .section-subtitle {

@@ -40,6 +40,9 @@
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
             </ul>
             <div class="navbar-actions" style="display:flex; align-items:center; gap:12px;">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
                 <button class="cart-nav-btn" aria-label="Open cart">
                     <span>🛒</span>
                     <span class="cart-badge">0</span>
@@ -82,6 +85,8 @@
             <div class="filter-tabs" role="tablist" aria-label="Menu categories">
                 <button class="filter-tab active" role="tab" data-filter="all" aria-selected="true" id="filter-all">All
                     Items</button>
+                <button class="filter-tab" role="tab" data-filter="favorites" aria-selected="false" id="filter-favs">❤️
+                    Favorites</button>
                 <button class="filter-tab" role="tab" data-filter="coffee" aria-selected="false" id="filter-coffee">☕
                     Coffee</button>
                 <button class="filter-tab" role="tab" data-filter="tea" aria-selected="false" id="filter-tea">🍵

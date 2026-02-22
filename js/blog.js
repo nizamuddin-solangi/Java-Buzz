@@ -52,19 +52,25 @@ document.addEventListener('DOMContentLoaded', async () => {
           <h3 class="blog-card-title">${post.title}</h3>
           <p class="blog-card-excerpt">${post.excerpt}</p>
           <div class="blog-tags">${tagsHTML}</div>
-          <div class="blog-card-footer">
-            <div class="blog-card-author">
-              <div class="blog-author-avatar">${initials}</div>
-              <div>
-                <div class="blog-author-name">${post.author}</div>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-author-avatar">${initials}</div>
+                <div>
+                  <div class="blog-author-name">${post.author}</div>
+                </div>
+              </div>
+              <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+                <button class="blog-share-btn" onclick="sharePost('${encodeURIComponent(post.title)}')">
+                  🔗 Share
+                </button>
+                <div class="blog-social-share">
+                  <a href="#" class="share-btn fb" onclick="sharePlatform('facebook', '${encodeURIComponent(post.title)}', event)" aria-label="Share on Facebook">f</a>
+                  <a href="#" class="share-btn tw" onclick="sharePlatform('twitter', '${encodeURIComponent(post.title)}', event)" aria-label="Share on Twitter">𝕏</a>
+                </div>
               </div>
             </div>
-            <button class="blog-share-btn" onclick="sharePost('${encodeURIComponent(post.title)}')">
-              🔗 Share
-            </button>
           </div>
-        </div>
-      `;
+        `;
             blogGrid.appendChild(card);
         });
 
@@ -95,7 +101,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Share handler
+    // Platform-specific share
+    window.sharePlatform = function (platform, encodedTitle, event) {
+        event.preventDefault();
+        const title = decodeURIComponent(encodedTitle);
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent(`Check out this coffee blog: ${title}`);
+        
+        let shareUrl = '';
+        if (platform === 'facebook') {
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        } else if (platform === 'twitter') {
+            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+        }
+        
+        if (shareUrl) {
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    };
+
+    // Generic share handler
     window.sharePost = function (encodedTitle) {
         const title = decodeURIComponent(encodedTitle);
         if (navigator.share) {

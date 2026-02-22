@@ -4,6 +4,41 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Theme Toggle (Dark Mode) ---
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.querySelector('.theme-icon');
+  const htmlEl = document.documentElement;
+
+  const initTheme = () => {
+    const savedTheme = localStorage.getItem('java-buzz-theme') || 'light';
+    htmlEl.setAttribute('data-theme', savedTheme);
+    updateThemeUI(savedTheme);
+  };
+
+  const updateThemeUI = (theme) => {
+    if (themeIcon) {
+      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  };
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      htmlEl.setAttribute('data-theme', newTheme);
+      localStorage.setItem('java-buzz-theme', newTheme);
+      updateThemeUI(newTheme);
+
+      // Add a little pop animation
+      themeToggle.style.transform = 'scale(0.8)';
+      setTimeout(() => themeToggle.style.transform = '', 150);
+    });
+  }
+
+  // Initial call
+  initTheme();
+
   // --- Page Loader ---
   const loader = document.querySelector('.page-loader');
   if (loader) {
